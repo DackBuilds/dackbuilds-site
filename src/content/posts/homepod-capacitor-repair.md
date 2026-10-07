@@ -59,7 +59,9 @@ It sits on our dining room table and plays chill jazz while we eat dinners I coo
 
 ## What it cost
 
-[Dylan: parts, tools and anything else, against the price of a used HomePod. Include whether the station was a one-time cost you will reuse.]
+The soldering and hot air station was $55, and it was the biggest purchase by far. I already had the repair mat, a screwdriver set and the other basic tools, so I did not need to buy those. [Dylan: add what the four capacitors, flux, solder wick and isopropyl alcohol cost, then the total.]
+
+A new HomePod is $300 right now, and that is the newer model, not the first generation I was fixing. Even counting the station, I came in far below that. The station is also a one-time cost. I will use it again, and I have already started looking at what else I own that is broken.
 
 ## What I would tell you before you start
 
