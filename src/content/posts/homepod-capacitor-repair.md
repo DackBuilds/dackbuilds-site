@@ -59,9 +59,9 @@ It sits on our dining room table and plays chill jazz while we eat dinners I coo
 
 ## What it cost
 
-The soldering and hot air station was $55, and it was the biggest purchase by far. I already had the repair mat, a screwdriver set and the other basic tools, so I did not need to buy those. [Dylan: add what the four capacitors, flux, solder wick and isopropyl alcohol cost, then the total.]
+The soldering and hot air station was $55, and it was the biggest purchase by far. I already had the repair mat, a screwdriver set and the other basic tools, so I did not need to buy those. The capacitors came in a pack of ten for about $30 with shipping. I only needed four, so I have spares. The flux and solder wick came with the station's solder kit, and I already had the isopropyl alcohol. That puts the total at about $85.
 
-A new HomePod is $300 right now, and that is the newer model, not the first generation I was fixing. Even counting the station, I came in far below that. The station is also a one-time cost. I will use it again, and I have already started looking at what else I own that is broken.
+A new HomePod is $300 right now, and that is the newer model, not the first generation I was fixing. Even counting the station, I came in at well under a third of that. The station is also a one-time cost. I will use it again, and I have already started looking at what else I own that is broken.
 
 ## What I would tell you before you start
 
