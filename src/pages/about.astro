@@ -1,0 +1,42 @@
+---
+import Base from '../layouts/Base.astro';
+import Windows from '../components/Windows.astro';
+---
+
+<Base title="About" description="Who is behind Dack Builds and what this site is for.">
+  <div class="wrap">
+    <header class="article-head">
+      <span class="eyebrow">About</span>
+      <h1>One apartment, a lot of wiring.</h1>
+      <p class="lede">
+        Dack Builds is where I write up the smart home and homelab projects I run in a rented apartment, including the
+        parts that did not work the first time.
+      </p>
+    </header>
+
+    <div class="prose">
+      <p>
+        I am Dack. I have spent more than ten years fixing and supporting consumer tech, and now I mostly build things
+        that talk to Home Assistant. Because I rent, every project has a rule: nothing permanent, nothing that costs me
+        the deposit, and nothing that leaves a hole in the wall.
+      </p>
+      <h2>What you will find here</h2>
+      <p>
+        Build logs with the real parts list, the dead ends, and the fix that finally worked. A post usually starts with
+        a problem I actually had, like a ceiling fan with no smart option or an intercom that only knows how to buzz.
+      </p>
+      <h2>How I handle affiliate links</h2>
+      <p>
+        Some links earn me a small commission. A post that has them says so at the top, and I do not pick a product
+        because it pays. If something is bad, I say so.
+      </p>
+      <h2>Get in touch</h2>
+      <p>
+        Write to <a href="mailto:hello@dackbuilds.com">hello@dackbuilds.com</a>. I read everything, and I answer when I
+        have something useful to say.
+      </p>
+    </div>
+
+    <Windows />
+  </div>
+</Base>

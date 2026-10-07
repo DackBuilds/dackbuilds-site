@@ -1,0 +1,86 @@
+---
+import Base from '../layouts/Base.astro';
+import Windows from '../components/Windows.astro';
+import { getPosts, formatDate } from '../lib/posts';
+
+const posts = await getPosts();
+const featured = posts.find((p) => p.data.featured) ?? posts[0];
+const rest = posts.filter((p) => p.id !== featured?.id);
+---
+
+<Base>
+  <div class="wrap">
+    <section class="intro">
+      <h1>Build logs from a rented apartment.</h1>
+      <p>
+        Home Assistant, a homelab, and every cheap gadget I could talk into working without drilling a single hole in
+        the wall.
+      </p>
+    </section>
+
+    {
+      featured ? (
+        <article class="featured">
+          <div class="plate">
+            {featured.data.hero ? (
+              <img src={featured.data.hero} alt={featured.data.heroAlt ?? ''} />
+            ) : (
+              <img
+                class="mark"
+                src="/brand/logo-full-dark.svg"
+                width="240"
+                height="240"
+                alt="The Dack Builds building with one lit window"
+              />
+            )}
+          </div>
+          <div class="copy">
+            <span class="eyebrow">Latest build{featured.data.draft ? ' (draft)' : ''}</span>
+            <h2>
+              <a href={`/posts/${featured.id}`}>{featured.data.title}</a>
+            </h2>
+            <p>{featured.data.description}</p>
+            {featured.data.tags.length > 0 && (
+              <ul class="tags">{featured.data.tags.map((t) => <li>{t}</li>)}</ul>
+            )}
+            <span class="mono">{formatDate(featured.data.pubDate)}</span>
+          </div>
+        </article>
+      ) : (
+        <div class="empty">
+          <Windows />
+          <h2>The first build log is still on the bench.</h2>
+          <p>Subscribe to the <a href="/rss.xml">RSS feed</a> and it will show up when it is done.</p>
+        </div>
+      )
+    }
+
+    {
+      rest.length > 0 && (
+        <section aria-labelledby="index-title">
+          <div class="index-head">
+            <h2 id="index-title" class="eyebrow">All builds</h2>
+            <span class="eyebrow">{posts.length} total</span>
+          </div>
+          <ul class="rows">
+            {rest.map((p) => (
+              <li class="row">
+                <span class="mono">{formatDate(p.data.pubDate)}</span>
+                <div>
+                  <a class="title" href={`/posts/${p.id}`}>
+                    {p.data.title}
+                    {p.data.draft ? ' (draft)' : ''}
+                  </a>
+                  <span class="desc">{p.data.description}</span>
+                </div>
+                {p.data.tags[0] && <span class="eyebrow">{p.data.tags[0]}</span>}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    <Windows />
+  </div>
+</Base>

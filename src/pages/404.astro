@@ -1,0 +1,16 @@
+---
+import Base from '../layouts/Base.astro';
+import Windows from '../components/Windows.astro';
+---
+
+<Base title="Page not found" description="That page does not exist.">
+  <div class="wrap">
+    <header class="article-head">
+      <span class="eyebrow">Error 404</span>
+      <h1>Nobody is home at this address.</h1>
+      <p class="lede">The page you wanted is not here. It may have moved, or it may never have been built.</p>
+    </header>
+    <Windows count={9} litAt={7} bAt={3} />
+    <p><a href="/">Back to all builds</a></p>
+  </div>
+</Base>

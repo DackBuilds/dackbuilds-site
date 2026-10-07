@@ -1,0 +1,65 @@
+---
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Windows from '../../components/Windows.astro';
+import { getPosts, formatDate, readingTime } from '../../lib/posts';
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  return posts.map((post) => ({ params: { id: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const { title, description, pubDate, updatedDate, tags, affiliate, hero, heroAlt, heroCaption } = post.data;
+---
+
+<Base title={title} description={description} type="article" publishedTime={pubDate} image={hero}>
+  <div class="wrap">
+    <header class="article-head">
+      <span class="eyebrow">Build log</span>
+      <h1>{title}</h1>
+      <p class="lede">{description}</p>
+      <div class="meta mono">
+        <span>By Dack</span>
+        <time datetime={pubDate.toISOString()}>{formatDate(pubDate)}</time>
+        {updatedDate && <span>Updated {formatDate(updatedDate)}</span>}
+        <span>{readingTime(post.body)} min read</span>
+      </div>
+      {tags.length > 0 && <ul class="tags">{tags.map((t) => <li>{t}</li>)}</ul>}
+      {
+        affiliate && (
+          <aside class="disclosure">
+            <strong>Affiliate links</strong>
+            Some links in this post are affiliate links. If you buy through them I may earn a small commission at no cost
+            to you. It does not change what I recommend.
+          </aside>
+        )
+      }
+    </header>
+
+    {
+      hero && (
+        <figure class="fig" style="max-width: var(--measure)">
+          <img src={hero} alt={heroAlt ?? ''} />
+          {heroCaption && (
+            <figcaption>
+              <span class="fig-n">Fig. 1.</span> {heroCaption}
+            </figcaption>
+          )}
+        </figure>
+      )
+    }
+
+    <article class="prose">
+      <Content />
+    </article>
+
+    <Windows count={7} litAt={1} bAt={4} />
+
+    <div class="post-foot mono">
+      <a href="/">All builds</a>
+      <a href="/rss.xml">Follow with RSS</a>
+    </div>
+  </div>
+</Base>

@@ -1,0 +1,22 @@
+---
+// A row of dark windows with a lit D and a dark B, the brand's recurring detail.
+// Used as a divider. `litAt` and `bAt` pick which windows they take.
+interface Props {
+  count?: number;
+  litAt?: number;
+  bAt?: number;
+}
+const { count = 9, litAt = 2, bAt = 6 } = Astro.props;
+const step = 22;
+const width = 8 + step * (count - 1) + 14;
+const items = Array.from({ length: count }, (_, i) => {
+  const x = 4 + i * step;
+  if (i === litAt) return { kind: 'd', d: `M${x} 4 H${x + 7} A7 8 0 0 1 ${x + 7} 20 H${x} Z` };
+  if (i === bAt) return { kind: 'b', d: `M${x} 4 H${x + 10} A3 4 0 0 1 ${x + 10} 12 A3 4 0 0 1 ${x + 10} 20 H${x} Z` };
+  return { kind: 'w', d: `M${x} 4 H${x + 14} V20 H${x} Z` };
+});
+---
+
+<svg class="windows" viewBox={`0 0 ${width} 24`} role="img" aria-label="A row of dark windows, one lit">
+  {items.map((it) => <path class={it.kind === 'd' ? 'lit' : 'w'} d={it.d} />)}
+</svg>
