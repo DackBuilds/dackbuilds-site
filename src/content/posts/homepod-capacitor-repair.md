@@ -13,7 +13,7 @@ It turns out the cause is well known. A handful of tiny ceramic capacitors near 
 
 ## The part that scared me
 
-Before I touched anything I watched a pile of repair videos. [Dylan: add the ones you followed, with links.] Watching other people lift a capacitor off a board with a hot air gun makes it look boring, which is exactly the effect I needed.
+Before I touched anything I watched a pile of repair videos. Two did most of the work for me: [one on taking the HomePod apart](https://www.youtube.com/watch?v=-YZUv5ErDFw&t=2s) and [one on the capacitor fix itself](https://www.youtube.com/watch?v=FfGiuh_QH3M). [Dylan: confirm which is which, and give me the channel names so I can credit the creators.] Watching other people lift a capacitor off a board with a hot air gun makes it look boring, which is exactly the effect I needed.
 
 The thing that surprised me was the size. I had pictured the usual barrel-shaped capacitors with legs. These are flat 1206 ceramic chips, about the size of a grain of rice, and they are held on by solder pads you can barely see. I only worked that out when I photographed the first one I removed. If you are following along, check what is actually on your board before you order parts.
 
