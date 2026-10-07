@@ -12,8 +12,6 @@ Every smart home blog I looked at before starting this one looked the same. Whit
 
 Here is how it came together, including the mistakes.
 
-[Dylan: decide whether to add a line here about how you made the site, for example that you built it with Claude. I wrote this post without claiming either way, so it stays honest whichever you pick.]
-
 ## Starting from two sites I admire
 
 I collected a pile of blogs I liked and kept coming back to two: Josh Comeau's site and History of Software. Neither one looks like a template. Both have a clear personality, careful type and a sense that a person made every choice. I did not want to copy either. I wanted to steal the attitude.
@@ -22,7 +20,7 @@ I collected a pile of blogs I liked and kept coming back to two: Josh Comeau's s
 
 The logo went through ten directions before I settled on one. Rubber ducks, bricks, a field catalog and a few others all got drawn, and most of them were too generic. What stuck was a building with one lit window.
 
-It became my initial. The left window is a yellow D. The right window is a dark B, with no light on, because the B has not earned it yet. On top of the building sits a rooftop water tower, which is a personal detail. [Dylan: add the tattoo here if you want it public, or leave this as it is.]
+It became my initial. The left window is a yellow D. The right window is a dark B, with no light on, because the B has not earned it yet. On top of the building sits a rooftop water tower, which gives it a skyline and keeps it from looking like a generic apartment block.
 
 ![The Dack Builds mark: a building with a rooftop water tower, a lit yellow D window and a dark B window.](/brand/logo-full-light.svg "The full mark. A lit D, a dark B, and a water tower on the roof.")
 
