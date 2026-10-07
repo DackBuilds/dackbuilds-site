@@ -12,7 +12,7 @@ For a while, my smart home lived on a Raspberry Pi. It worked, until I started w
 
 So I bought a used Dell OptiPlex 3090 Ultra on eBay for $189.99 [Dylan: add shipping], and over five weeks it became the machine that runs nearly everything in the apartment. This is what is on it, what it cost, and the three things that broke before any of it worked.
 
-[Photo: the OptiPlex next to a hand or the router for scale. Caption: "The whole server. It is smaller than a hardcover book."]
+![A hand holding a slim black Dell OptiPlex 3090 Ultra upright in a living room.](/images/optiplex-3090-ultra.jpg "The OptiPlex 3090 Ultra in one hand. This is the entire server.")
 
 ## The rules I set first
 

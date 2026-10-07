@@ -25,7 +25,7 @@ The thing that surprised me was the size. I had pictured the usual barrel-shaped
 - Kapton tape to hold the corners of the board down, because hot air will push a light board around.
 - A phone, to photograph every cap and its position before it came off. This is the single most useful habit in the whole job.
 
-[Photo: the workbench setup. Suggested caption: "The station, the mat, and a board that is smaller than I expected."]
+![A first-generation HomePod taken apart on a black repair mat, with the speaker driver rings, the boards, the screws and a precision bit kit laid out around it.](/images/homepod-teardown.jpg "The whole HomePod, laid out on the mat before any soldering. The mesh sleeve is the grey bag on the left.")
 
 ## Taking the old ones off
 
@@ -33,7 +33,7 @@ I had to pry the HomePod open first, which means working through the glued mesh 
 
 I photographed the empty pads, cleaned them with wick and flux, and wiped the area with isopropyl alcohol before putting anything back.
 
-[Photo: the board with the old caps removed, next to the old caps. Suggested caption: "Four old caps, in the order they came off."]
+![Three tiny rectangular ceramic capacitors sitting on a dark mat next to a ruler.](/images/homepod-old-caps.jpg "Old capacitors next to a ruler. Each one is about the size of a grain of rice.")
 
 ## Putting the new ones on
 
@@ -54,6 +54,8 @@ I then played music at a few different volumes, since a fault like this can hide
 ## Where it lives now
 
 It sits on our dining room table and plays chill jazz while we eat dinners I cooked. That is a much better job than being e-waste.
+
+![A space grey first-generation HomePod on a walnut table, fully reassembled.](/images/homepod-finished.jpg "Back together, back on the table, and no longer making that noise.")
 
 ## What it cost
 
