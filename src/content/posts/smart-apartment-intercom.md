@@ -4,7 +4,7 @@ description: A wall intercom with a speaker, a mic and three buttons, wired into
 pubDate: 2026-10-07
 tags: [Intercom, Home Assistant]
 draft: true
-featured: true
+featured: false
 affiliate: true
 ---
 
