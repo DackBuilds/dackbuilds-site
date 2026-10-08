@@ -14,7 +14,7 @@ const { Content } = await render(post);
 const { title, description, pubDate, updatedDate, tags, affiliate, hero, heroAlt, heroCaption } = post.data;
 ---
 
-<Base title={title} description={description} type="article" publishedTime={pubDate} image={hero}>
+<Base title={title} description={description} type="article" publishedTime={pubDate} modifiedTime={updatedDate} tags={tags} image={hero}>
   <div class="wrap">
     <header class="article-head">
       <a class="back mono" href="/">&larr; All builds</a>
