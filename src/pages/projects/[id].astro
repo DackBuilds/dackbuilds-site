@@ -1,0 +1,62 @@
+---
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Windows from '../../components/Windows.astro';
+import { getProjects, statusLabel } from '../../lib/projects';
+
+export async function getStaticPaths() {
+  const projects = await getProjects();
+  return projects.map((project) => ({ params: { id: project.id }, props: { project } }));
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+const { title, summary, status, kind, tags, downloadUrl, buyUrl, price, repoUrl } = project.data;
+---
+
+<Base title={title} description={summary}>
+  <div class="wrap">
+    <header class="article-head">
+      <a class="back mono" href="/projects">&larr; All projects</a>
+      <span class="eyebrow">{kind ?? 'Project'}</span>
+      <h1>{title}</h1>
+      <p class="lede">{summary}</p>
+      <div class="meta mono">
+        <span class="status" data-status={status}>{statusLabel[status]}</span>
+        {status === 'available' && <span>{price ?? 'Free'}</span>}
+      </div>
+      {tags.length > 0 && <ul class="tags">{tags.map((t) => <li>{t}</li>)}</ul>}
+      {
+        status === 'available' && (downloadUrl || buyUrl) && (
+          <div class="get">
+            {buyUrl ? (
+              <a class="button" href={buyUrl}>
+                Buy{price ? ` for ${price}` : ''}
+              </a>
+            ) : (
+              <a class="button" href={downloadUrl}>
+                Download
+              </a>
+            )}
+            {repoUrl && (
+              <a class="button ghost" href={repoUrl}>
+                View the code
+              </a>
+            )}
+          </div>
+        )
+      }
+    </header>
+
+    <article class="prose">
+      <Content />
+    </article>
+
+    <Windows count={7} litAt={1} bAt={4} />
+
+    <div class="post-foot mono">
+      <a href="/projects">All projects</a>
+      <a href="/rss.xml">Follow with RSS</a>
+    </div>
+  </div>
+</Base>

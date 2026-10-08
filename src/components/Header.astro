@@ -12,6 +12,7 @@ const is = (p: string) => (p === '/' ? path === '/' : path.startsWith(p));
     </a>
     <nav class="site-nav" aria-label="Main">
       <a href="/" aria-current={is('/') || is('/posts') ? 'page' : undefined}>Home</a>
+      <a href="/projects" aria-current={is('/projects') ? 'page' : undefined}>Projects</a>
       <a href="/about" aria-current={is('/about') ? 'page' : undefined}>About</a>
       <a href="/rss.xml">RSS</a>
       <ThemeToggle />

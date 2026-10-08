@@ -1,0 +1,49 @@
+---
+import Base from '../../layouts/Base.astro';
+import Windows from '../../components/Windows.astro';
+import { getProjects, statusLabel } from '../../lib/projects';
+
+const projects = await getProjects();
+---
+
+<Base title="Projects" description="Tools and software from Dack Builds that you can download and run yourself.">
+  <div class="wrap">
+    <header class="article-head">
+      <span class="eyebrow">Projects</span>
+      <h1>Things I made that you can use.</h1>
+      <p class="lede">
+        Build logs are the story. These are the finished (or nearly finished) tools behind them, kept in one place so they
+        do not get buried in a post.
+      </p>
+    </header>
+
+    {
+      projects.length > 0 ? (
+        <ul class="cards">
+          {projects.map((p) => (
+            <li class="card">
+              <span class="status" data-status={p.data.status}>
+                {statusLabel[p.data.status]}
+              </span>
+              <h2>
+                <a href={`/projects/${p.id}`}>{p.data.title}</a>
+              </h2>
+              <p>{p.data.summary}</p>
+              <div class="card-foot mono">
+                {p.data.kind && <span>{p.data.kind}</span>}
+                {p.data.status === 'available' && <span>{p.data.price ?? 'Free'}</span>}
+              </div>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <div class="empty">
+          <h2>Nothing here yet.</h2>
+          <p>The first project is on the bench.</p>
+        </div>
+      )
+    }
+
+    <Windows />
+  </div>
+</Base>

@@ -20,4 +20,23 @@ const posts = defineCollection({
   }),
 });
 
-export const collections = { posts };
+const projects = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/projects' }),
+  schema: z.object({
+    title: z.string(),
+    summary: z.string(),
+    // idea: not started. building: in progress, not downloadable. available: ready to get.
+    status: z.enum(['idea', 'building', 'available']).default('building'),
+    kind: z.string().optional(),
+    tags: z.array(z.string()).default([]),
+    order: z.number().default(100),
+    draft: z.boolean().default(false),
+    // For available projects. downloadUrl is a free download; buyUrl is a checkout link (Gumroad, Stripe, etc).
+    downloadUrl: z.string().optional(),
+    buyUrl: z.string().optional(),
+    price: z.string().optional(),
+    repoUrl: z.string().optional(),
+  }),
+});
+
+export const collections = { posts, projects };
