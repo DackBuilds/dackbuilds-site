@@ -65,6 +65,7 @@
 
 html {
   -webkit-text-size-adjust: 100%;
+  scroll-padding-top: 6rem;
 }
 
 body {
@@ -147,7 +148,18 @@ h3 {
 
 /* Header */
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
   border-bottom: 2px solid var(--rail);
+  background: var(--bg);
+}
+
+@supports (backdrop-filter: blur(8px)) {
+  .site-header {
+    background: color-mix(in srgb, var(--bg) 96%, transparent);
+    backdrop-filter: blur(10px);
+  }
 }
 
 .site-header .wrap {
@@ -627,6 +639,30 @@ h3 {
 .fig-n {
   color: var(--accent);
   font-weight: 500;
+}
+
+/* Logo and other vector marks sit on a dark plate at a sane size, like the home card */
+.fig-mark img {
+  height: 15rem;
+  padding: 1.75rem;
+  box-sizing: border-box;
+  object-fit: contain;
+  background: var(--code-bg);
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+.back:hover {
+  color: var(--ink);
+  border-bottom-color: var(--yellow);
 }
 
 .post-foot {

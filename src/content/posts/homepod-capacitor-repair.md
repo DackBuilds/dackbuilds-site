@@ -1,9 +1,9 @@
 ---
 title: I fixed a dying HomePod with four capacitors and a lot of nerves
 description: A first-generation HomePod with a crackling "death fart" fault, a first-ever micro soldering job, and a fire extinguisher on standby. It plays chill jazz again.
-pubDate: 2026-10-08
+pubDate: 2026-10-07
 tags: [Repair, Soldering, HomePod]
-draft: true
+draft: false
 affiliate: false
 ---
 
@@ -13,14 +13,14 @@ It turns out the cause is well known. A handful of tiny ceramic capacitors near 
 
 ## The part that scared me
 
-Before I touched anything I watched a pile of repair videos. Two did most of the work for me: [one on taking the HomePod apart](https://www.youtube.com/watch?v=-YZUv5ErDFw&t=2s) and [one on the capacitor fix itself](https://www.youtube.com/watch?v=FfGiuh_QH3M). [Dylan: confirm which is which, and give me the channel names so I can credit the creators.] Watching other people lift a capacitor off a board with a hot air gun makes it look boring, which is exactly the effect I needed.
+Before I touched anything I watched a pile of repair videos. Two videos from the Nic's Fix channel did most of the work for me: [one on taking the HomePod apart](https://www.youtube.com/watch?v=-YZUv5ErDFw&t=2s) and [one on the capacitor fix itself](https://www.youtube.com/watch?v=FfGiuh_QH3M). Watching other people lift a capacitor off a board with a hot air gun makes it look boring, which is exactly the effect I needed.
 
 The thing that surprised me was the size. I had pictured the usual barrel-shaped capacitors with legs. These are flat 1206 ceramic chips, about the size of a grain of rice, and they are held on by solder pads you can barely see. I only worked that out when I photographed the first one I removed. If you are following along, check what is actually on your board before you order parts.
 
 ## What I used
 
 - A WEP 882D station with an iron and hot air in one unit. A certified station would have cost more than the repair saves, so I went with the cheaper one and was careful with it. I never left it running unattended and kept it on a heat-safe mat.
-- Four replacement capacitors, 1206 size, 10µF, X7R, rated for at least 16V. [Dylan: confirm the exact part you ordered.]
+- Four replacement capacitors, 1206 size, 10µF, X7R, rated for at least 16V.
 - Flux, solder wick, 99% isopropyl alcohol and a pair of tweezers.
 - Kapton tape to hold the corners of the board down, because hot air will push a light board around.
 - A phone, to photograph every cap and its position before it came off. This is the single most useful habit in the whole job.
@@ -39,9 +39,7 @@ I photographed the empty pads, cleaned them with wick and flux, and wiped the ar
 
 Soldering the new ones down was harder than the removal, and the nerves came right back. Ceramic chips crack if you heat them too long or too hard, and the pads can lift. So I kept each joint short and moved on.
 
-Once the first two of the four were seated firmly, something clicked. The other two went down fine. When I was done they were sitting roughly parallel with no visible bridges between the pads. [Dylan: say whether you checked for shorts with a multimeter before powering up.]
-
-[Photo: the finished joints under magnification. Suggested caption: "Four new caps. Not pretty, but flat and connected."]
+Once the first two of the four were seated firmly, something clicked. The other two went down fine. When I was done they were sitting roughly parallel with no visible bridges between the pads.
 
 ## The first power-up
 

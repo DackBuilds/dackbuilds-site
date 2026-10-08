@@ -1,16 +1,16 @@
 ---
 title: A secondhand OptiPlex now runs my whole apartment
 description: A used Dell mini PC, Proxmox, and five weeks of learning the hard way. What runs on it, what it cost, what idles at 3 watts, and the three things that broke before it worked.
-pubDate: 2026-10-08
+pubDate: 2026-10-07
 tags: [Homelab, Proxmox, Home Assistant]
-draft: true
+draft: false
 featured: false
 affiliate: false
 ---
 
 For a while, my smart home lived on a Raspberry Pi. It worked, until I started wanting more: ad blocking for the whole house, a budgeting app that does not hand my bank logins to a startup, and a way to know when something at home had quietly fallen over.
 
-So I bought a used Dell OptiPlex 3090 Ultra on eBay for $189.99 [Dylan: add shipping], and over five weeks it became the machine that runs nearly everything in the apartment. This is what is on it, what it cost, and the three things that broke before any of it worked.
+So I bought a used Dell OptiPlex 3090 Ultra on eBay for $189.99, and over five weeks it became the machine that runs nearly everything in the apartment. This is what is on it, what it cost, and the three things that broke before any of it worked.
 
 ![A hand holding a slim black Dell OptiPlex 3090 Ultra upright in a living room.](/images/optiplex-3090-ultra.jpg "The OptiPlex 3090 Ultra in one hand. This is the entire server.")
 
@@ -22,9 +22,7 @@ I wanted it to be cheap, private and boring. No new subscriptions, nothing expos
 
 The OptiPlex has an i5-1145G7 with four cores and eight threads, 16 GB of RAM and a 256 GB NVMe drive. I also use a 500 GB USB SSD I already owned as the nightly backup target, and my old Pi 5 got a second job as a standby.
 
-[Dylan: add what the Pi 5, the SSD and the microSD originally cost, or say you already had them.]
-
-At idle, with everything running, the CPU package draws about 3 watts according to Intel's own energy counter. That is the chip only, not the whole box measured at the wall. [Dylan: if you plug it into a meter, add the wall reading here. If not, leave this sentence as it is.] Load average sits around 0.1, so the machine is mostly asleep.
+At idle, with everything running, the CPU package draws about 3 watts according to Intel's own energy counter. That is the chip only, not the whole box measured at the wall. Load average sits around 0.1, so the machine is mostly asleep.
 
 ## What runs on it
 
@@ -39,8 +37,6 @@ Proxmox is the base. On top of it, Home Assistant gets its own VM so it keeps it
 - Music Assistant, a dashboard called Homepage, and a self-hosted wiki I call the Home Bible.
 
 The memory story is the part I like most. Every Docker service has a hard cap, so a runaway container cannot take the others with it. Music Assistant uses about 229 MB of a 1.5 GB cap, Pi-hole uses 27 MB, and Proxmox still reports around 5 GB free.
-
-[Photo: the Proxmox dashboard, with IPs and hostnames blurred. Caption: "Everything on one box, with room to spare."]
 
 ## What went wrong first
 
@@ -66,7 +62,7 @@ I also typed every password, token and API key myself into files only root can r
 
 ## The bill
 
-[Dylan: total cost of the OptiPlex, any parts you bought, and what you pay each month. The software is free, Tailscale is on the personal plan, and Backblaze is $0 a month at roughly 55 MB of a 10 GB free tier, so the monthly total should be $0.]
+The OptiPlex cost $189.99. The Pi 5 and the external SSD were already sitting in my drawer, so they cost nothing new. The software is all free, Tailscale is on the personal plan, and Backblaze sits inside its free tier at roughly 55 MB of 10 GB. Ongoing cost: $0 a month.
 
 ## Where this goes next
 

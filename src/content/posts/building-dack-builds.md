@@ -12,9 +12,9 @@ Every smart home blog I looked at before starting this one looked the same. Whit
 
 Here is how it came together, including the mistakes.
 
-## Starting from two sites I admire
+## What I read
 
-I collected a pile of blogs I liked and kept coming back to two: Josh Comeau's site and History of Software. Neither one looks like a template. Both have a clear personality, careful type and a sense that a person made every choice. I did not want to copy either. I wanted to steal the attitude.
+I spend a lot of time on The Verge, Gizmodo and MacRumors, and I read pretty much the whole 9to5 family, from 9to5Mac and 9to5Google to 9to5Toys. They are great at telling you what a gadget is. I wanted a place for the other half, the part where it is on the bench and it does not work yet.
 
 ## The mark
 
@@ -22,7 +22,7 @@ The logo went through ten directions before I settled on one. Rubber ducks, bric
 
 It became my initial. The left window is a yellow D. The right window is a dark B, with no light on, because the B has not earned it yet. On top of the building sits a rooftop water tower, which gives it a skyline and keeps it from looking like a generic apartment block.
 
-![The Dack Builds mark: a building with a rooftop water tower, a lit yellow D window and a dark B window.](/brand/logo-full-light.svg "The full mark. A lit D, a dark B, and a water tower on the roof.")
+![The Dack Builds mark: a building with a rooftop water tower, a lit yellow D window and a dark B window.](/brand/logo-full-dark.svg "The full mark. A lit D, a dark B, and a water tower on the roof.")
 
 ## When the logo stopped working
 

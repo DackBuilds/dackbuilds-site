@@ -14,10 +14,11 @@ export default function remarkFigures() {
       const img = node.children[0];
       if (img.type !== 'image' || !img.title) return;
       n += 1;
+      const cls = /\.svg(\?|$)/i.test(img.url) ? 'fig fig-mark' : 'fig';
       parent.children[index] = {
         type: 'html',
         value:
-          `<figure class="fig"><img src="${esc(img.url)}" alt="${esc(img.alt || '')}" loading="lazy" decoding="async">` +
+          `<figure class="${cls}"><img src="${esc(img.url)}" alt="${esc(img.alt || '')}" loading="lazy" decoding="async">` +
           `<figcaption><span class="fig-n">Fig. ${n}.</span> ${esc(img.title)}</figcaption></figure>`,
       };
     });
