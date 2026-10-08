@@ -1,6 +1,6 @@
 ---
-title: Why Dack Builds looks the way it does
-description: A water tower, two windows, one light, and the contrast problem that nearly sank the logo. How this site got its look, its colors and its stack.
+title: The building with one lit window
+description: How a water tower, two windows and a contrast problem became the Dack Builds mark.
 pubDate: 2026-10-07
 tags: [Site, Design]
 draft: false
